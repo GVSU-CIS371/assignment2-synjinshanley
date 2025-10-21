@@ -24,6 +24,7 @@
               name="Base"
               :id="`r${base.id}`"
               :value="base.color"
+              v-model="currentBase"
             />
             {{ base.name }}
           </label>
@@ -61,7 +62,7 @@
 
 <script setup lang="ts">
 import Beverage from "./components/Beverage.vue";
-import { temps, bases, creamers, syrups, currentTemp } from "./stores/beverage";
+import { temps, bases, creamers, syrups, currentTemp, currentBase } from "./stores/beverage";
 </script>
 
 <style lang="scss">
