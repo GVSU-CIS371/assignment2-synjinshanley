@@ -38,6 +38,7 @@
               name="Creamer"
               :id="`r${creamer.id}`"
               :value="creamer.color"
+              v-model="currentCream"
             />
             {{ creamer.name }}
           </label>
@@ -62,7 +63,7 @@
 
 <script setup lang="ts">
 import Beverage from "./components/Beverage.vue";
-import { temps, bases, creamers, syrups, currentTemp, currentBase } from "./stores/beverage";
+import { temps, bases, creamers, syrups, currentTemp, currentBase, currentCream } from "./stores/beverage";
 </script>
 
 <style lang="scss">
