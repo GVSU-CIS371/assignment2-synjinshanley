@@ -7,7 +7,8 @@
         <Creamer />
       </template>
       <template v-slot:mid>
-        <Syrup />
+        <Base v-if="currentSyrup === '#c6c6c6'"/>
+        <Syrup v-else/>
       </template>
       <template v-slot:bottom>
         <Base />
@@ -23,6 +24,7 @@ import Base from "./Base.vue";
 import Creamer from "./Creamer.vue";
 import Hot from "./Hot.vue";
 import Cold from "./Cold.vue";
+import { currentSyrup } from "../stores/beverage";
 
 type Props = {
   isIced: boolean;
